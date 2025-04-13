@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Temperature Converter</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./Icon.png" alt="image/icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="./Icon.png" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
 </head>
 <body>
-    <form>
-        <h1>Temperature conversion: </h1>
-        <input type="number" id="textBox" value="0"><br>
-        <input type="radio" id="toFahrenheit" name="unit">
-        <label for="toFahrenheit">Celsius - Fahrenheit</label><br>
-        <input type="radio" id="toCelsius" name="unit">
-        <label for="toCelsius">Fahrenheit - Celsius</label><br>
-        <button type="button" onclick="convert()">Submit</button>
-        <p id="result">Select a unit</p>
-    </form>
-    <script src="index.js"></script>
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="themeToggle">
+      <span class="slider round"></span>
+    </label>
+    <span id="modeLabel">Light Mode</span>
+  </div>
+  <form>
+    <h1>🌡️ Temperature Converter</h1>
+    <input type="number" id="textBox" value="0" placeholder="Enter temperature"><br>
+    <div class="radio-group">
+      <input type="radio" id="toFahrenheit" name="unit">
+      <label for="toFahrenheit"><i class="fas fa-temperature-high"></i> Celsius → Fahrenheit</label><br>
+      <input type="radio" id="toCelsius" name="unit">
+      <label for="toCelsius"><i class="fas fa-temperature-low"></i> Fahrenheit → Celsius</label><br>
+    </div>
+    <button type="button" onclick="convert()">Convert</button>
+    <p id="result">Select a unit</p>
+  </form>
+  <script src="index.js"></script>
 </body>
 </html>
